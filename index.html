@@ -14,35 +14,61 @@
     <div id="form">
       <div id="background">
         
-        <div id="card-front"></div>
-        <div id="card-back"></div>
+        <div id="card-front">
+          <img src="./images/card-logo.svg"></img>
+          <div id="user-data">
+            <p id="account-number">0000 0000 0000 0000</p>
+            <div id="user-name">
+              <p id="card-holder-name"></p>
+              <p id="date">00/00</p>
+            </div>
+          </div>
+        </div>
+        <div id="card-back">
+          <div id="cvc-shower">
+            <p id="my-cvc">000</p>
+          </div>
+        </div>
       </div>
       <div id="user-form">
+        <div id="success-message">
+        <img src="./images/icon-complete.svg" alt="" srcset="">
+        <h2>THANK YOU!</h2>
+        <p>We've added your card details</p>
+      </div>
+        <div id="input-lists">
         <div id="user-input">
           <label for="cardholer">CARDHOLDER NAME</label>
-          <input type="text" name="cardholder" id="cardholder"placeholder="e.g. Jane Appleseed">
+          <input type="text" name="cardholder" id="cardholder" placeholder="e.g. Jane Appleseed">
+          <p id="name-error" class="error">&nbsp;</p>
         </div>
         <div id="user-input">
           <label for="cardnumber">CARD NUMBER</label>
-          <input type="text" name="cardnumber" format="000 000"id="cardnumber"placeholder="e.g. 1234 5678 9123 0000">
+          <input type="text"  name="cardnumber" maxlength="19"format="000 000"id="cardnumber"placeholder="e.g. 1234 5678 9123 0000">
+          
+          <p id="number-error"class="error">&nbsp;</p>
         </div>
         <div id="user-input-two">
           <div id="cont">
             <label for="cardnumber">EXP. DATE (MM/YY)</label>
             <div id="inputs">
-              <input type="text" name="cardnumber" id="cardnumber" placeholder="MM">
-              <input type="text" name="cardnumber" class="year" id="cardnumber"placeholder="YY">
+              <input type="text" name="cardnumber" maxlength="2" id="month" placeholder="MM">
+              <input type="text" name="cardnumber" maxlength="2" class="year" id="year"placeholder="YY">
             </div>
+            <p id="date-error" class="error">&nbsp;</p>
           </div>
           <div id="cont-2">
             <label for="cardnumber">CVC</label>
             <div id="inputs">
-              <input type="text" name="cardnumber" id="cvc" placeholder="e.g. 123">
+              <input type="text" maxlength="3"name="cardnumber" id="cvc" placeholder="e.g. 123">
             </div>
+          <p id="cvc-error" class="error">&nbsp;</p>
+
           </div>
         </div>
+      </div>
         <div id="user-input">
-          <button>Confirm</button>
+          <button id="confirm">Confirm</button>
         </div>
       </div>
     </div>
