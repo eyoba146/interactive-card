@@ -179,13 +179,16 @@ confirmBtn.addEventListener("click",()=>{
             }
         }
         if(!anyError) {
-        
+            inputForm.setAttribute("class","disappear")
+            success.setAttribute("class","appear")
             inputForm.style.display = "none"
             success.style.display = "flex"
             isSubmitted = 1
             confirmBtn.innerText = "Continue"
         }
     }else {
+        success.setAttribute("class","disappear")
+        inputForm.setAttribute("class","appear")
         success.style.display = "none"
         inputForm.style.display = "block" 
         confirmBtn.innerText = "Confirm"

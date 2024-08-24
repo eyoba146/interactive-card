@@ -112,12 +112,12 @@ body {
 #background #card-back { 
     width: 447px;
     height: 245px;
-    margin-top: 30px;
+    margin-top: -10px;
     margin-left: 150px;
     position:absolute;
     transform: scale(0.85);
     border-radius: 10px;
-    box-shadow: 1px 1px 15px hsl(280, 2%, 30%);
+    box-shadow: -300px 1px 305px hsl(278, 68%, 11%);
     background-image: url(../images/bg-card-back.png);
 }
 #form #user-form {
@@ -208,6 +208,20 @@ body {
 #success-message img {
     padding: 10px;
 }
+.appear {
+    animation: appear .5s ease;
+}
+.disappear {
+    animation: disappear .5s ease;
+}
+@keyframes appear {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+@keyframes disappear {
+    from{transform: scale(1);}
+    to{transform: scale(0);}
+}
 #success-message p {
     color: hsl(279, 6%, 55%);
     font-size: 14px;
@@ -241,7 +255,11 @@ body {
 body {
     overflow: hidden;
 }
-
+@media (max-width:853px) {
+    #user-form {
+        margin-top: 130px;
+    }
+}
 @media (max-width:768px) {
     #background #card-back,#background #card-front { 
         margin-top: -10px;
@@ -285,7 +303,7 @@ body {
         margin-left: 10px;
     }
     #user-form {
-        margin-top: 100px;
+        margin-top: 60px;
     }
 }
 @media (max-width:414px) {
