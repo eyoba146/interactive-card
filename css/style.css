@@ -96,17 +96,19 @@ body {
     margin-top: -1px;
     font-size: 14px !important;
 }
-#user-name #card-holder-name {
+#user-data #card-holder-name {
     margin-left: 35px;
     font-size: 18px;
     max-width: 270px;
+    background-color: red;
     overflow-x: auto;
 }
-#user-name #account-number {
-    max-width: 270px;
-    overflow-x: auto;
+#user-data #account-number {
+    max-width: 470px;
+    overflow-x: auto !important;
 }
-#user-name #card-holder-name::-webkit-scrollbar {
+
+#user-data #card-holder-name::-webkit-scrollbar,#user-data #account-number::-webkit-scrollbar {
     height: 29px !important;
 }
 #user-name #date {

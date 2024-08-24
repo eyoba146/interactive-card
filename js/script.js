@@ -27,8 +27,10 @@ holderName.addEventListener("input",() => {
         myName.innerText = holderName.value;
 })
 
-cardNumber.addEventListener("input",()=> {
-
+cardNumber.addEventListener("input",function() {
+    if (this.value.length > this.maxLength) {
+        this.value = this.value.slice(0, this.maxLength);
+    }
     for(let i = 0; i < cardNumber.value.length;i++) {
         accNoFormat[i] = cardNumber.value[i]    
     }
@@ -41,7 +43,10 @@ cardNumber.addEventListener("input",()=> {
 
 })
 
-month.addEventListener("input",()=>{
+month.addEventListener("input",function() {
+    if (this.value.length > this.maxLength) {
+        this.value = this.value.slice(0, this.maxLength);
+    }
     for(let i=0; i< month.value.length;i++) {
         dateFormat[i] = month.value[i]
     }
@@ -52,7 +57,10 @@ month.addEventListener("input",()=>{
     updatedDateFormat = ""
 
 })
-year.addEventListener("input",()=>{
+year.addEventListener("input",function (){
+    if (this.value.length > this.maxLength) {
+        this.value = this.value.slice(0, this.maxLength);
+    }
     for(let i=0; i< year.value.length;i++) {
         dateFormat[i+3] = year.value[i]
     }
