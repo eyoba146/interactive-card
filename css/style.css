@@ -102,6 +102,10 @@ body {
     max-width: 270px;
     overflow-x: auto;
 }
+#user-name #account-number {
+    max-width: 270px;
+    overflow-x: auto;
+}
 #user-name #card-holder-name::-webkit-scrollbar {
     height: 29px !important;
 }
