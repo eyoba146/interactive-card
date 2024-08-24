@@ -27,9 +27,9 @@ holderName.addEventListener("input",() => {
         myName.innerText = holderName.value;
 })
 
-cardNumber.addEventListener("input",function() {
-    if (this.value.length > this.maxLength) {
-        this.value = this.value.slice(0, this.maxLength);
+cardNumber.addEventListener("input",()=> {
+    if (cardNumber.value.length > cardNumber.maxLength) {
+        cardNumber.value = cardNumber.value.slice(0, cardNumber.maxLength);
     }
     for(let i = 0; i < cardNumber.value.length;i++) {
         accNoFormat[i] = cardNumber.value[i]    
@@ -43,9 +43,9 @@ cardNumber.addEventListener("input",function() {
 
 })
 
-month.addEventListener("input",function() {
-    if (this.value.length > this.maxLength) {
-        this.value = this.value.slice(0, this.maxLength);
+month.addEventListener("input",()=> {
+    if (month.value.length > month.maxLength) {
+        month.value = month.value.slice(0, month.maxLength);
     }
     for(let i=0; i< month.value.length;i++) {
         dateFormat[i] = month.value[i]
@@ -57,9 +57,9 @@ month.addEventListener("input",function() {
     updatedDateFormat = ""
 
 })
-year.addEventListener("input",function (){
-    if (this.value.length > this.maxLength) {
-        this.value = this.value.slice(0, this.maxLength);
+year.addEventListener("input",()=> {
+    if (year.value.length > year.maxLength) {
+        year.value = year.value.slice(0, year.maxLength);
     }
     for(let i=0; i< year.value.length;i++) {
         dateFormat[i+3] = year.value[i]
@@ -71,9 +71,9 @@ year.addEventListener("input",function (){
     updatedDateFormat = ""
 
 })
-cvc.addEventListener("input",function() {
-    if (this.value.length > this.maxLength) {
-        this.value = this.value.slice(0, this.maxLength);
+cvc.addEventListener("input",()=> {
+    if (cvc.value.length > cvc.maxLength) {
+        cvc.value = cvc.value.slice(0, cvc.maxLength);
     }
     myCvc.innerText = cvc.value
 })
