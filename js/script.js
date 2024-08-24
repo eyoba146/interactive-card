@@ -75,7 +75,7 @@ cvc.addEventListener("input",()=> {
     if (cvc.value.length > cvc.maxLength) {
         cvc.value = cvc.value.slice(0, cvc.maxLength);
     }
-    myCvc.innerText = cvc.value
+    myCvc.innerText = cvc.value;
 })
 
 function checkName() {
